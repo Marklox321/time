@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салат</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+        }
+        div{
+        margin-left: 35%;
+        margin-right: 45%;
+            background-color: white;
+            width: 145px;
+            height: 73px;
+        }
+        p {
+         font-size: 20px;
+         color: gray;
+        }
+    </style>
+</head>
+<body>
+    <a href="sa_p_l.html">Назад</a>
+
+    <br>
+    <br>
+    <br>
+
+    <div>
+    <p id="time1"></p>
+    <p id="time2"></p>
+    </div>
+
+  <script>
+    
+
+   
+      var currentTime1 = new Date();
+      var day1 = currentTime1.getDate();
+      var month1 = currentTime1.getMonth() + 1;
+      var hours1 = currentTime1.getHours();
+      var minutes1 = currentTime1.getMinutes();
+      
+      day1 = (day1 < 10) ? "0" + day1 : day1;
+      month1 = (month1 < 10) ? "0" + month1 : month1;
+      hours1 = (hours1 < 10) ? "0" + hours1 : hours1;
+      minutes1 = (minutes1 < 10) ? "0" + minutes1 : minutes1;
+
+      var timeString1 = day1 + "  " + month1 + "  " + hours1 + "  " + minutes1;
+      document.getElementById("time1").textContent = timeString1;
+    
+
+
+
+
+      var currentTime2 = new Date();
+
+      currentTime2.setHours(currentTime2.getHours() + 16);
+
+      var day2 = currentTime2.getDate();
+      var month2 = currentTime2.getMonth() + 1;
+      var hours2 =  currentTime2.getHours();
+      var minutes2 = currentTime2.getMinutes();
+      
+      day2 = (day2 < 10) ? "0" + day2 : day2;
+      month2 = (month2 < 10) ? "0" + month2 : month2;
+      hours2 = (hours2 < 10) ? "0" + hours2 : hours2;
+      minutes2 = (minutes2 < 10) ? "0" + minutes2 : minutes2;
+
+      var timeString2 = day2 + "  " + month2 + "  " + hours2 + "  " + minutes2;
+      document.getElementById("time2").textContent = timeString2;
+      
+    
+
+    
+  </script>
+</body>
+</html>
